@@ -15,7 +15,10 @@
 #include "plasma.h"
 #include "fling.h"
 
-void plasma_send(int fd, plasma_request *req) {
+
+
+   void plasma_send(int fd,
+		  plasma_request *req) {
   int req_count = sizeof(plasma_request);
   if (write(fd, req, req_count) != req_count) {
     LOG_ERR("write error");
